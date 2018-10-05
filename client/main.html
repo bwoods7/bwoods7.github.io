@@ -1,0 +1,83 @@
+<head>
+<link href="https://fonts.googleapis.com/css?family=Montserrat|Montserrat+Alternates:400,500" rel="stylesheet">
+  <title>Stridely</title>
+</head>
+
+<body>
+
+  <div id="main"></div>
+</body>
+
+
+<template name="spacer">
+  <div class="spacer"> </div>
+</template>
+
+<template name="box">
+  <div id="rectangle" class="center-div">
+    Match with music at your pace
+    <div class="spacer" style="margin-bottom: 50px;"></div>
+    <a href="https://accounts.spotify.com/authorize/?client_id=b570fc241e3141b6bf3d21f82dbb1df7&response_type=code&redirect_uri=http://localhost:3000/callback/&scope=user-read-private%20user-read-email&state=34fFs29kd09">
+      <div id="login" class="center-div">
+        Login with Spotify
+      </div>
+    </a>
+  </div>
+</template>
+
+<template name="home">
+
+  {{> spacer}}
+  <h1>Stridely</h1>
+  {{> spacer}}
+  <div id="rectangle" class="center-div">
+    Match with music at your pace
+    <div class="spacer" style="margin-bottom: 50px;"></div>
+    <a href="https://accounts.spotify.com/authorize/?client_id=b570fc241e3141b6bf3d21f82dbb1df7&response_type=token&redirect_uri=http://localhost:3000/callback/&scope=user-read-private%20user-read-email&state=34fFs29kd09">
+      <div id="login" class="center-div">
+        Login with Spotify
+      </div>
+    </a>
+  </div>
+</template>
+
+<template name="app">
+
+  {{> spacer}}
+  <div id="tapToSetBpm" class="center-div">Tap to set bpm</div>
+  {{> spacer}}
+  <div id="bpmResult" class="center-div">{{number}}</div>
+  {{loginCred}}
+  {{> spacer}}
+    <div
+    id="bpmButton" class="center-div"> </div>
+    <div class="center-div">  {{userInfo}}</div>
+</template>
+
+<!--
+
+onmousedown=BpmButtonDown
+onmouseup="bpmButtonUp()"
+
+
+document.getElementById('bpmButton').style.box-shadow=none;
+
+onmouseup="object.style.box-shadow=10px 10px 0px 0px rgba(100,100,100,0.5)"
+
+
+{{> spacer}}
+<div id="tapToSetBpm" class="center-div">Tap to set bpm</div>
+{{> spacer}}
+  <div
+  id="bpmButton"
+  class="center-div"
+
+  > </div>
+
+
+{{> spacer}}
+  <h1 class="center-div" style="font-size:4em;">Stridely</h1>
+  {{> spacer}}
+  {{> box}}
+
+-->
